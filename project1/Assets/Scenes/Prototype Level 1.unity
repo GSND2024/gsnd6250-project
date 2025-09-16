@@ -1300,7 +1300,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalScale: {x: 0.3986661, y: 0.3986661, z: 0.3986661}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1991,6 +1991,10 @@ PrefabInstance:
     - target: {fileID: 3084110963788906766, guid: 49a1b49f3621948488e7150e67c7ddf3, type: 3}
       propertyPath: greenBar
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3084110963788906766, guid: 49a1b49f3621948488e7150e67c7ddf3, type: 3}
+      propertyPath: fallThreshold
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 3084110963788906766, guid: 49a1b49f3621948488e7150e67c7ddf3, type: 3}
       propertyPath: colorList.Array.size
