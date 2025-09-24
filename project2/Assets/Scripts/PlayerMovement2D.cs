@@ -2,6 +2,7 @@
 // Attach to: Player (Rigidbody2D + CapsuleCollider2D)
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem; // New Input System
 using UnityEngine.InputSystem.LowLevel;
 
@@ -136,6 +137,13 @@ public class PlayerMovement2D : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
     }
     
+     private void OnTriggerEnter2D(Collider2D other)
+     {
+         if (other.CompareTag("Win"))
+         {
+             SceneManager.LoadScene("WinScreen");
+         }
+     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag($"Trap"))
