@@ -8,6 +8,9 @@ using UnityEngine.InputSystem.LowLevel;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement2D : MonoBehaviour
 {
+    [Header("Activate")]
+    [SerializeField]public GameObject[] objectsToActivate;
+    
     [Header("Move")]
     [SerializeField] private float moveSpeed = 9f;
 
@@ -23,6 +26,8 @@ public class PlayerMovement2D : MonoBehaviour
 
     [Header("Debug")]
     [SerializeField] private bool debugLogs = false;
+    
+   
 
     private Rigidbody2D rb;
     private float coyoteCounter;
@@ -129,5 +134,24 @@ public class PlayerMovement2D : MonoBehaviour
         if (groundCheck == null) return;
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag($"Trap"))
+        {
+            ActivateObjects();
+        }
+    }
+    
+    private void ActivateObjects()
+    {
+        foreach (GameObject obj in objectsToActivate)
+        {
+            if (obj != null)
+            {
+                obj.SetActive(true);
+            }
+        }
     }
 }
