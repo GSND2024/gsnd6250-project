@@ -7,7 +7,7 @@ public class CameraFollow2D : MonoBehaviour
 {
     public Transform target;
     public float smooth = 8f;
-    public Vector2 offset = new Vector2(0f, 1.5f);
+    public Vector2 offset = new Vector2(0f, 0.5f);
 
     private void LateUpdate()
     {
