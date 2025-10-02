@@ -37,6 +37,28 @@ public class PlayerMovement2D : MonoBehaviour
     [Header("Debug")]
     [SerializeField] private bool debugLogs = false;
 
+    [Header("Boss Contact Settings")]
+    [SerializeField] private bool bossContactHurtsPlayer = true;
+    [SerializeField] private int bossContactDamage = 1;
+    [SerializeField] private float bossContactCooldown = 0.35f;   // seconds between touch hits
+    [SerializeField] private float touchKnockbackForce = 7.5f;    // tweak to taste
+    [SerializeField] private float touchKnockbackDuration = 0.08f;
+
+    [Header("Hit Flash")]
+    [SerializeField] private Color hitFlashColor = Color.white;  // bright white flash
+    [SerializeField] private float hitFlashDuration = 0.12f;
+    [SerializeField] private int flashRepeatCount = 2;           // how many blinks
+
+
+    private SpriteRenderer[] _spriteRenderers;
+    private Color[] _originalColors;
+
+
+    private float _lastBossTouchTime = -999f;
+    private Rigidbody2D _rb2d;
+    private bool _knockbacking;
+
+
     private Rigidbody2D rb;
     private float coyoteCounter;
     private float jumpBufferCounter;
@@ -56,7 +78,9 @@ public class PlayerMovement2D : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        _rb2d = GetComponent<Rigidbody2D>();
+
+
         currentHealth = maxHealth; 
 
         // Jump (Space) -> sets a buffer that Update() will consume with coyote time
@@ -126,6 +150,12 @@ public class PlayerMovement2D : MonoBehaviour
             healthSlider.wholeNumbers = true;
             healthSlider.value = currentHealth;
         }
+
+        _spriteRenderers = GetComponentsInChildren<SpriteRenderer>(true);
+        _originalColors = new Color[_spriteRenderers.Length];
+        for (int i = 0; i < _spriteRenderers.Length; i++)
+            _originalColors[i] = _spriteRenderers[i].color;
+
     }
 
     private void Update()
@@ -195,7 +225,9 @@ public class PlayerMovement2D : MonoBehaviour
                 if (debugLogs) Debug.Log("[Attack K] applied jump-like impulse");
             }
 
-            // TODO: add damage, stun, hitstop, etc.
+            // Damage the boss
+            var boss = other.GetComponentInParent<BossHealth>(); // boss might be on root
+            if (boss != null) boss.ApplyHit(1);
         }
     }
 
@@ -223,7 +255,7 @@ public class PlayerMovement2D : MonoBehaviour
         // Only deactivate if still active (avoid conflicts if reused/retriggered elsewhere)
         if (go != null) go.SetActive(false);
     }
-    
+
     private void TakeDamage(int amount)
     {
         currentHealth -= amount;
@@ -234,13 +266,36 @@ public class PlayerMovement2D : MonoBehaviour
 
         if (debugLogs) Debug.Log($"[Health] Player HP = {currentHealth}");
 
+        StartCoroutine(HitFlash());   // <<< Add this line
+
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             if (debugLogs) Debug.Log("[Health] Player Dead!");
         }
     }
-    
+
+    private IEnumerator HitFlash()
+    {
+        for (int r = 0; r < flashRepeatCount; r++)
+        {
+            // Switch to flash color
+            for (int i = 0; i < _spriteRenderers.Length; i++)
+                _spriteRenderers[i].color = hitFlashColor;
+
+            yield return new WaitForSeconds(hitFlashDuration * 0.5f);
+
+            // Restore original colors
+            for (int i = 0; i < _spriteRenderers.Length; i++)
+                _spriteRenderers[i].color = _originalColors[i];
+
+            yield return new WaitForSeconds(hitFlashDuration * 0.5f);
+        }
+    }
+
+
+
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Boss"))
@@ -248,4 +303,54 @@ public class PlayerMovement2D : MonoBehaviour
             TakeDamage(1);
         }
     }
+
+    // Public wrapper so other scripts can apply damage without exposing internals
+    public void TakeDamage_Public(int amount) => TakeDamage(amount);
+
+    // Public knockback API for the hurtbox to use
+    public void ApplyKnockback(Vector2 direction, float force, float duration)
+    {
+        if (_rb2d == null || _knockbacking) return;
+        StartCoroutine(DoKnockback_Custom(direction, force, duration));
+    }
+
+    private System.Collections.IEnumerator DoKnockback_Custom(Vector2 direction, float force, float duration)
+    {
+        _knockbacking = true;
+
+        // cancel vertical velocity for a crisper bump
+        Vector2 v = _rb2d.linearVelocity;
+        v.y = 0f;
+        _rb2d.linearVelocity = v;
+
+        _rb2d.AddForce(direction * force, ForceMode2D.Impulse);
+        yield return new WaitForSeconds(duration);
+        _knockbacking = false;
+    }
+
+
+
+
+
+    private System.Collections.IEnumerator DoKnockback(Vector2 direction)
+    {
+        _knockbacking = true;
+
+        // Optional: if you have a "canMove" flag, you can briefly disable input here.
+        // canMove = false;
+
+        // Zero out any vertical velocity if you want a crisp hop
+        Vector2 v = _rb2d.linearVelocity;
+        v.y = 0f;
+        _rb2d.linearVelocity = v;
+
+        // Apply an instantaneous impulse away from the boss
+        _rb2d.AddForce(direction * touchKnockbackForce, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(touchKnockbackDuration);
+
+        // canMove = true;
+        _knockbacking = false;
+    }
+
 }

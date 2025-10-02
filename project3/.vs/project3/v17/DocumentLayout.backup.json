@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\project3\\assets\\scripts\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\assets\\scripts\\playermovement2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\assets\\scripts\\bosslevelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bosslevelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BossLevelController.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\BossLevelController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BossLevelController.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\BossLevelController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BossLevelController.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAQwE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T02:48:48.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerMovement2D.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\PlayerMovement2D.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement2D.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\PlayerMovement2D.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerMovement2D.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAIA8wCYBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T02:26:50.884Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BossHealth.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\BossHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\BossHealth.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\BossHealth.cs",
+              "RelativeToolTip": "Assets\\Scripts\\BossHealth.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAgwFoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T02:26:19.574Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
