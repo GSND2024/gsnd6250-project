@@ -50,7 +50,7 @@ public class PlayerMovement2D : MonoBehaviour
     [SerializeField] private int flashRepeatCount = 2;           // how many blinks
 
 
-    private SpriteRenderer[] _spriteRenderers;
+    [SerializeField] SpriteRenderer[] spriteRenderers;
     private Color[] _originalColors;
 
 
@@ -151,13 +151,12 @@ public class PlayerMovement2D : MonoBehaviour
             healthSlider.value = currentHealth;
         }
 
-        _spriteRenderers = GetComponentsInChildren<SpriteRenderer>(true);
-        _originalColors = new Color[_spriteRenderers.Length];
-        for (int i = 0; i < _spriteRenderers.Length; i++)
-            _originalColors[i] = _spriteRenderers[i].color;
-
+        
+        _originalColors = new Color[spriteRenderers.Length];
+             for (int i = 0; i < spriteRenderers.Length; i++)
+                 _originalColors[i] = spriteRenderers[i].color;
+     
     }
-
     private void Update()
     {
         // Horizontal input
@@ -280,14 +279,14 @@ public class PlayerMovement2D : MonoBehaviour
         for (int r = 0; r < flashRepeatCount; r++)
         {
             // Switch to flash color
-            for (int i = 0; i < _spriteRenderers.Length; i++)
-                _spriteRenderers[i].color = hitFlashColor;
+            for (int i = 0; i < spriteRenderers.Length; i++)
+                spriteRenderers[i].color = hitFlashColor;
 
             yield return new WaitForSeconds(hitFlashDuration * 0.5f);
 
             // Restore original colors
-            for (int i = 0; i < _spriteRenderers.Length; i++)
-                _spriteRenderers[i].color = _originalColors[i];
+            for (int i = 0; i < spriteRenderers.Length; i++)
+                spriteRenderers[i].color = _originalColors[i];
 
             yield return new WaitForSeconds(hitFlashDuration * 0.5f);
         }
