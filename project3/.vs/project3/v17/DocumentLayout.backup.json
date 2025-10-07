@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\project3\\assets\\scripts\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\assets\\scripts\\playermovement2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playermovement2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\project3\\assets\\scripts\\playerhurtbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playerhurtbox.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\project3\\assets\\scripts\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bosshealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{35D3394D-C0A5-1C00-AAE7-AC523E8D7D28}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\assets\\scripts\\bosslevelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,7 +30,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "PlayerHurtbox.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\PlayerHurtbox.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerHurtbox.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\PlayerHurtbox.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerHurtbox.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T03:02:31.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "BossLevelController.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\BossLevelController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BossLevelController.cs",
@@ -38,25 +55,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "PlayerMovement2D.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\PlayerMovement2D.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerMovement2D.cs",
               "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\PlayerMovement2D.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerMovement2D.cs",
-              "ViewState": "AgIAAPEAAAAAAAAAAIA8wCYBAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8BAAAAAAAAAAAvwEkBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-02T02:26:50.884Z"
+              "WhenOpened": "2025-10-02T02:26:50.884Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "BossHealth.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\BossHealth.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\BossHealth.cs",
               "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\project3\\Assets\\Scripts\\BossHealth.cs",
               "RelativeToolTip": "Assets\\Scripts\\BossHealth.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAgwFoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAFoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-02T02:26:19.574Z",
               "EditorCaption": ""
