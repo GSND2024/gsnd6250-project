@@ -4,13 +4,11 @@ using TMPro;
 public class InteractTrigger : MonoBehaviour
 {
     public float interactDistance = 3f;
-    public string interactMessage = "Press SPACE to interact";
     
     public Dialogue dialogue;
     [SerializeField] private DialogueManager dialogueManager;
-
-    [Header("UI Reference")]
-    public TextMeshProUGUI promptText; // 在 Inspector 把你的 TMP UI 拖进来
+    
+    public TextMeshProUGUI promptText; 
 
     private Transform player;
     private bool playerInRange = false;
@@ -20,7 +18,7 @@ public class InteractTrigger : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").transform;
 
         if (promptText != null)
-            promptText.gameObject.SetActive(false); // 确保初始隐藏
+            promptText.gameObject.SetActive(false); 
     }
 
     void Update()
@@ -54,7 +52,7 @@ public class InteractTrigger : MonoBehaviour
     {
         if (promptText != null)
         {
-            promptText.text = interactMessage;
+            promptText.text = "Press SPACE";
             promptText.gameObject.SetActive(true);
         }
     }
@@ -70,8 +68,6 @@ public class InteractTrigger : MonoBehaviour
         Debug.Log("Interaction triggered!");
         
         dialogueManager.StartDialogue(dialogue);
-        // TODO: 在这里写你的互动逻辑，比如：Talk/Hack
-        // DialogueManager.Instance.BeginTalk();
-        // HackManager.Instance.BeginHack(targetBot);
+
     }
 }
