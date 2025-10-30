@@ -532,6 +532,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3940111725437664118, guid: 8406f07e3092643598afd69c1fed18f9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 181988350}
+    - targetCorrespondingSourceObject: {fileID: 3940111725437664118, guid: 8406f07e3092643598afd69c1fed18f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 181988355}
   m_SourcePrefab: {fileID: 100100000, guid: 8406f07e3092643598afd69c1fed18f9, type: 3}
 --- !u!1001 &173060527
 PrefabInstance:
@@ -608,7 +611,104 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 285b0842547bace47ad628070050b23b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.343
+  m_Volume: 0.23
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &181988355
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181988345}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: ad69472a1ff718640b947ceeb1fcb94b, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.32
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -943,8 +1043,37 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1073511054060416, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 406832262}
   m_SourcePrefab: {fileID: 100100000, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
+--- !u!1 &207214222 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+  m_PrefabInstance: {fileID: 1362718662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &207214226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 207214222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e11c901d4942f796c70486dc1855f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  interactDistance: 2
+  dialogue:
+    name: Redd
+    sentences:
+    - Didn't think Old Thom still had that kind of swing in him, near took the lad's
+      head clean off!
+    - Next round's on whoever breaks the next table! Let's keep it lively, eh?
+  dialogueManager: {fileID: 566788076}
+  promptText: {fileID: 1974932509}
 --- !u!1001 &212386753
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1199,15 +1328,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4349549203921020, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.477
+      value: -4.436
       objectReference: {fileID: 0}
     - target: {fileID: 4349549203921020, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.053
+      value: 0.118
       objectReference: {fileID: 0}
     - target: {fileID: 4349549203921020, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -14.974
+      value: -12.676
       objectReference: {fileID: 0}
     - target: {fileID: 4349549203921020, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1240,7 +1369,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1670697701759372, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1196403845}
   m_SourcePrefab: {fileID: 100100000, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
 --- !u!1001 &268059834
 PrefabInstance:
@@ -2130,6 +2262,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &406832256 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1073511054060416, guid: a25cff517260cd94f9ab8334e85b125a, type: 3}
+  m_PrefabInstance: {fileID: 201589057}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &406832262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406832256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e11c901d4942f796c70486dc1855f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  interactDistance: 2
+  dialogue:
+    name: Barrel of ale
+    sentences:
+    - You can see faint scratchings in the exposed face that seem to be extremely
+      recent
+    - They say "Property of Old Thom"
+  dialogueManager: {fileID: 566788076}
+  promptText: {fileID: 1974932509}
 --- !u!1001 &407553424
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2774,6 +2932,32 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f95f560eca9ccc4bb008325e11c12fd, type: 3}
+--- !u!1 &503247388 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+  m_PrefabInstance: {fileID: 897410823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &503247392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503247388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e11c901d4942f796c70486dc1855f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  interactDistance: 2
+  dialogue:
+    name: Silas
+    sentences:
+    - Noise like that's why I sit over here.
+    - They'll tire themselves out. They always do.
+    - Some nights, the tavern drinks harder than the folk in it.
+  dialogueManager: {fileID: 566788076}
+  promptText: {fileID: 1974932509}
 --- !u!1001 &515524867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3959,6 +4143,31 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
+--- !u!1 &716568804 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1465824569428636, guid: 17163d74e7c6ef04681f4fb607351e08, type: 3}
+  m_PrefabInstance: {fileID: 856429019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &716568810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716568804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e11c901d4942f796c70486dc1855f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  interactDistance: 1
+  dialogue:
+    name: Knocked over chair
+    sentences:
+    - One of two chairs knocked over. This one looks like the previous occupant was
+      tackled to the ground.
+  dialogueManager: {fileID: 566788076}
+  promptText: {fileID: 1974932509}
 --- !u!1001 &725961637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4130,6 +4339,36 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f95f560eca9ccc4bb008325e11c12fd, type: 3}
+--- !u!1 &737091920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+  m_PrefabInstance: {fileID: 1202373514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &737091921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 737091920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e11c901d4942f796c70486dc1855f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  interactDistance: 2
+  dialogue:
+    name: Tobin
+    sentences:
+    - Didn't mean to cause trouble. Guess that's just how you get welcomed 'round
+      here.
+    - I just brushed the mug, I swear! Didn't think the old man guarded it like a
+      dragon's hoard.
+    - Old Thom's got a right hook for the ages, I'll say. My ears are still ringing.
+    - He calmed down after I got him another ale. Think that's the secret to peace
+      in this place.
+  dialogueManager: {fileID: 566788076}
+  promptText: {fileID: 1974932509}
 --- !u!1001 &765810122
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4703,7 +4942,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1465824569428636, guid: 17163d74e7c6ef04681f4fb607351e08, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 716568810}
   m_SourcePrefab: {fileID: 100100000, guid: 17163d74e7c6ef04681f4fb607351e08, type: 3}
 --- !u!1001 &867628331
 PrefabInstance:
@@ -5128,6 +5370,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17163d74e7c6ef04681f4fb607351e08, type: 3}
+--- !u!1001 &897410823
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.972
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.004
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.769
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5331106
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000020124363
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.84604555
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000031937336
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -115.568
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b95088f6403565a4f84124fdf18444cf, type: 2}
+    - target: {fileID: 919132149155446097, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      propertyPath: m_Name
+      value: Human_Tavern_Keeper_t_1030020341_texture
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 503247392}
+  m_SourcePrefab: {fileID: 100100000, guid: f4eeb2fdeae94f5479e4dea77af9d72e, type: 3}
 --- !u!1001 &897645274
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7139,6 +7445,95 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
+--- !u!1 &1196403839 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1670697701759372, guid: 41c2416439f912f4e89bd6b1167f45e5, type: 3}
+  m_PrefabInstance: {fileID: 256998630}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1196403845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196403839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e11c901d4942f796c70486dc1855f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  interactDistance: 2
+  dialogue:
+    name: Knocked over mug
+    sentences:
+    - A mug of ale that has been knocked over.
+    - You can still see the puddle of ale soaking into the floorboards.
+  dialogueManager: {fileID: 566788076}
+  promptText: {fileID: 1974932509}
+--- !u!1001 &1202373514
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.204
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.827
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8053148
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.00000003039979
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.59284747
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.00000002237937
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -72.719
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9e85130cd8133e94687e8e71851e79ee, type: 2}
+    - target: {fileID: 919132149155446097, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      propertyPath: m_Name
+      value: Classic_NPC_s_that_go_1030015158_texture
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 737091921}
+  m_SourcePrefab: {fileID: 100100000, guid: 7abb728034f778e4db5afcdcbe338a79, type: 3}
 --- !u!1001 &1209073996
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7253,6 +7648,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a367ff7fe2957344b0564bf2655256e, type: 3}
+--- !u!1001 &1218434820
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.43786
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.002
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.800042
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.6226304
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000023503645
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7825161
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000029539162
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 102.983
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 04c9c86d709c6714195cf9bcfac395af, type: 2}
+    - target: {fileID: 919132149155446097, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      propertyPath: m_Name
+      value: Classic_NPC_s_that_go_1030014743_texture
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1868428297}
+  m_SourcePrefab: {fileID: 100100000, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
 --- !u!1 &1222954232
 GameObject:
   m_ObjectHideFlags: 0
@@ -8383,6 +8842,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1741443e564c85b4f884eafe53d0ac74, type: 3}
+--- !u!1001 &1362718662
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.043
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.003
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.024
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.047195386
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.0000000017815818
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9988857
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0000000377069
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -174.59
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e75be1de268bed84bb39c34c15ef2f6f, type: 2}
+    - target: {fileID: 919132149155446097, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      propertyPath: m_Name
+      value: NPC_that_goes_to_a_ta_1030015107_texture
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 207214226}
+  m_SourcePrefab: {fileID: 100100000, guid: fdda5e37f94599d47aeb4d27f45dd86c, type: 3}
 --- !u!1001 &1363366136
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8572,13 +9095,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   interactDistance: 2
-  interactMessage: Press SPACE
   dialogue:
-    name: Tavern Keeper
+    name: Merrit Grigg
     sentences:
-    - 1
-    - 2
-    - 3
+    - Welcome in to the Drunken Griffin. Can I getcha anything?
+    - Don't mind the mess, happens twice a week, give or take.
+    - Old Thom had his fifteenth mug knocked over by Tobin, you know how it goes.
+    - I just hope they leave enough coin for new chairs this time.
+  dialogueManager: {fileID: 566788076}
+  promptText: {fileID: 1974932509}
+--- !u!1 &1388500622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+  m_PrefabInstance: {fileID: 1842106077}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1388500623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1388500622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e11c901d4942f796c70486dc1855f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  interactDistance: 2
+  dialogue:
+    name: Old Thom
+    sentences:
+    - You here to buy the next round or just gawk at an old man's misfortune?
+    - Aye, I threw a punch or two. But only for the sake o' the drink, mind you.
+    - Bah. Next time, I'm drinkin' straight from the barrel. Harder to knock over.
   dialogueManager: {fileID: 566788076}
   promptText: {fileID: 1974932509}
 --- !u!1 &1403830000
@@ -11353,6 +11902,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 639d8009f73c0c0479e83997d1fc2ec2, type: 3}
+--- !u!1001 &1842106077
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.364
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.000991
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -13.954
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.86709285
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.000000032731847
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.4981467
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.000000018804515
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 59.755
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c2165bc3b5de49b41bbf41b232fe3731, type: 2}
+    - target: {fileID: 919132149155446097, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      propertyPath: m_Name
+      value: NPC_that_goes_to_a_ta_1030020344_texture
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1388500623}
+  m_SourcePrefab: {fileID: 100100000, guid: 1b6c91590b8ec1348ae835799e026129, type: 3}
 --- !u!1001 &1854092279
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11410,6 +12023,32 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15fcccd297c6d44439e6c17b1cd1071d, type: 3}
+--- !u!1 &1868428293 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ec8eb60deb0f9834bacde71e163e2d58, type: 3}
+  m_PrefabInstance: {fileID: 1218434820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1868428297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868428293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 647e11c901d4942f796c70486dc1855f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InteractTrigger
+  interactDistance: 2
+  dialogue:
+    name: Hob Denner
+    sentences:
+    - Aye, I've known Thom longer than he's been drinkin' ale, funny that.
+    - I pulled him off before he broke the lad, or his mug arm. Priorities, you see.
+    - Ah, this place'd be dull without him. Just wish he'd spill less of the entertainment.
+  dialogueManager: {fileID: 566788076}
+  promptText: {fileID: 1974932509}
 --- !u!1001 &1869802063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11886,6 +12525,7 @@ GameObject:
   - component: {fileID: 1921931101}
   - component: {fileID: 1921931100}
   - component: {fileID: 1921931099}
+  - component: {fileID: 1921931103}
   m_Layer: 0
   m_Name: fireplace
   m_TagString: Untagged
@@ -12017,6 +12657,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1921931103
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921931098}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c9c52ebedde8d6f4cbfcecb281c6d5b3, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.29
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &1925619625
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13351,3 +14088,8 @@ SceneRoots:
   - {fileID: 1022069095}
   - {fileID: 1622107024}
   - {fileID: 566788077}
+  - {fileID: 1218434820}
+  - {fileID: 1202373514}
+  - {fileID: 897410823}
+  - {fileID: 1362718662}
+  - {fileID: 1842106077}
