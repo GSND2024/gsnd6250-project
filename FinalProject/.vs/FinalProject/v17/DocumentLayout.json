@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{36012BDC-9B93-0B29-A773-991AFCB701A1}|Unity.RenderPipelines.Universal.Shaders.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\library\\packagecache\\com.unity.render-pipelines.universal@1e1527b3a17b\\shaders\\lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{36012BDC-9B93-0B29-A773-991AFCB701A1}|Unity.RenderPipelines.Universal.Shaders.csproj|solutionrelative:library\\packagecache\\com.unity.render-pipelines.universal@1e1527b3a17b\\shaders\\lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Lit.shader",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
+              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
+              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-11-20T00:40:36.76Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
