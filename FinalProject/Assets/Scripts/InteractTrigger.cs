@@ -25,6 +25,13 @@ public class InteractTrigger : MonoBehaviour
     {
         float distance = Vector3.Distance(player.position, transform.position);
 
+        // If a dialogue is currently running, hide prompt and ignore input
+        if (GlobalGameState.dialogueActive)
+        {
+            HidePrompt();
+            return;
+        }
+
         if (distance <= interactDistance)
         {
             if (!playerInRange)
@@ -33,7 +40,10 @@ public class InteractTrigger : MonoBehaviour
                 ShowPrompt();
             }
 
-            if (Input.GetKeyDown(KeyCode.Space))
+            // Only start dialogue if the prompt is actually visible
+            if (Input.GetKeyDown(KeyCode.Space) &&
+                promptText != null &&
+                promptText.gameObject.activeSelf)
             {
                 TriggerInteraction();
             }
@@ -47,6 +57,7 @@ public class InteractTrigger : MonoBehaviour
             }
         }
     }
+
 
     void ShowPrompt()
     {
@@ -66,8 +77,9 @@ public class InteractTrigger : MonoBehaviour
     void TriggerInteraction()
     {
         Debug.Log("Interaction triggered!");
-        
-        dialogueManager.StartDialogue(dialogue);
 
+        HidePrompt();                          // hide "Press SPACE"
+        dialogueManager.StartDialogue(dialogue);
     }
+
 }

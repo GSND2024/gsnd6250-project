@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\interacttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interacttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,32 +23,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InteractTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\InteractTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\InteractTrigger.cs",
-              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\InteractTrigger.cs",
-              "RelativeToolTip": "Assets\\Scripts\\InteractTrigger.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAqwFMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T11:37:18.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "DialogueManager.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\DialogueManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DialogueManager.cs",
               "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\DialogueManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\DialogueManager.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAA3wDIAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAG8AAAAAAAAAAAAqwKoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-20T06:45:58.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Lit.shader",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
               "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
