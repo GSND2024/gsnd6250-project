@@ -6,7 +6,7 @@ public class OutsideTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (GlobalGameState.cardCount >= 3)
+            if (GlobalGameState.cardCount >= 4)
             {
                 SceneManager.LoadScene("HedgeMaze");
             }
