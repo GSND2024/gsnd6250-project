@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+
 public class DialogueManager : MonoBehaviour
 {
     [Header("UI")]
@@ -22,6 +23,8 @@ public class DialogueManager : MonoBehaviour
     private string _currentSentence;
 
     private bool _active;
+    
+    public static event System.Action OnDialogueEnded;
 
     private void Awake()
     {
@@ -157,6 +160,8 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 1f;
 
         HideUI();
+        
+        OnDialogueEnded?.Invoke();
     }
 
     private IEnumerator FadeCanvas(CanvasGroup cg, float from, float to, float duration)

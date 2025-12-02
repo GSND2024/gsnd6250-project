@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GunShoot : MonoBehaviour
 {
@@ -12,18 +14,50 @@ public class GunShoot : MonoBehaviour
     int destroyedTargets = 0;
 
     public TMP_Text ammoText;
-    
-    public GameObject dialogueCanvas;
-    public DialogueManager dm;
 
+    public GameObject dialogueCanvas;
     public Dialogue winDialogue;
     public Dialogue tieDialogue;
     public Dialogue loseDialogue;
+
+    public GameObject resultMenu;
+    public Button replayButton;
+    public Button endButton;
+
+    public string replaySceneName = "ShootingArea";
+    public string endSceneName = "EndScene";
+
+    public MonoBehaviour lookController;
+    
+    void OnEnable()
+    {
+        DialogueManager.OnDialogueEnded += ShowResultMenu;
+    }
+
+    void OnDisable()
+    {
+        DialogueManager.OnDialogueEnded -= ShowResultMenu;
+    }
 
     void Start()
     {
         currentAmmo = maxAmmo;
         UpdateAmmoText();
+
+        if (dialogueCanvas != null)
+            dialogueCanvas.SetActive(false);
+
+        if (resultMenu != null)
+            resultMenu.SetActive(false);
+
+        if (replayButton != null)
+            replayButton.onClick.AddListener(ReplayScene);
+
+        if (endButton != null)
+            endButton.onClick.AddListener(GoToEndScene);
+        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     void Update()
@@ -66,11 +100,13 @@ public class GunShoot : MonoBehaviour
             ammoText.text = "Ammo: " + currentAmmo + "/" + maxAmmo;
     }
 
-    // ReSharper disable Unity.PerformanceAnalysis
     void ShowResult()
     {
         if (dialogueCanvas != null)
             dialogueCanvas.SetActive(true);
+
+        DialogueManager dm = FindObjectOfType<DialogueManager>();
+        if (dm == null) return;
 
         if (destroyedTargets == 6 && winDialogue != null)
             dm.StartDialogue(winDialogue);
@@ -78,5 +114,29 @@ public class GunShoot : MonoBehaviour
             dm.StartDialogue(tieDialogue);
         else if (destroyedTargets <= 4 && loseDialogue != null)
             dm.StartDialogue(loseDialogue);
+    }
+
+    void ShowResultMenu()
+    {
+        if (resultMenu != null)
+            resultMenu.SetActive(true);
+        
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        
+        if (lookController != null)
+            lookController.enabled = false;
+    }
+
+    void ReplayScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(replaySceneName);
+    }
+
+    void GoToEndScene()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(endSceneName);
     }
 }
