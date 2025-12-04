@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
@@ -28,7 +29,14 @@ public class GunShoot : MonoBehaviour
     public string endSceneName = "EndScene";
 
     public MonoBehaviour lookController;
+
+    public Transform muzzleTransform;
+    public GameObject bulletTrailPrefab;
+    public float trailSpeed = 200f;
+    public float recoilKick = 2f;
     
+    public GameObject hitEffectPrefab;
+
     void OnEnable()
     {
         DialogueManager.OnDialogueEnded += ShowResultMenu;
@@ -55,7 +63,7 @@ public class GunShoot : MonoBehaviour
 
         if (endButton != null)
             endButton.onClick.AddListener(GoToEndScene);
-        
+
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -84,14 +92,53 @@ public class GunShoot : MonoBehaviour
         Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
         Ray ray = cam.ScreenPointToRay(screenCenter);
 
+        Vector3 startPoint = muzzleTransform != null ? muzzleTransform.position : ray.origin;
+        Vector3 hitPoint = startPoint + ray.direction * shootDistance;
+
         if (Physics.Raycast(ray, out RaycastHit hit, shootDistance))
         {
+            hitPoint = hit.point;
+
             if (hit.collider.CompareTag("Target"))
             {
                 destroyedTargets++;
+                SpawnHitEffect(hit.point, hit.normal);
                 Destroy(hit.collider.gameObject);
             }
         }
+
+        SpawnTrail(startPoint, hitPoint);
+        ApplyRecoil();
+    }
+
+    void SpawnTrail(Vector3 start, Vector3 end)
+    {
+        if (bulletTrailPrefab == null) return;
+
+        GameObject trail = Instantiate(bulletTrailPrefab, start, Quaternion.identity);
+        StartCoroutine(MoveTrail(trail, start, end));
+    }
+
+    IEnumerator MoveTrail(GameObject trail, Vector3 start, Vector3 end)
+    {
+        float distance = Vector3.Distance(start, end);
+        float t = 0f;
+
+        while (t < 1f)
+        {
+            t += Time.deltaTime * (trailSpeed / distance);
+            trail.transform.position = Vector3.Lerp(start, end, t);
+            yield return null;
+        }
+
+        trail.transform.position = end;
+        Destroy(trail, 0.1f);
+    }
+
+    void ApplyRecoil()
+    {
+        if (lookController is PlayerController3D pc)
+            pc.externalRecoil += recoilKick;
     }
 
     void UpdateAmmoText()
@@ -120,10 +167,10 @@ public class GunShoot : MonoBehaviour
     {
         if (resultMenu != null)
             resultMenu.SetActive(true);
-        
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
-        
+
         if (lookController != null)
             lookController.enabled = false;
     }
@@ -139,4 +186,13 @@ public class GunShoot : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene(endSceneName);
     }
+    
+    void SpawnHitEffect(Vector3 position, Vector3 normal)
+{
+    Debug.Log("HitEffect Spawned at: " + position);
+    if (hitEffectPrefab == null) return;
+
+    Quaternion rot = Quaternion.LookRotation(normal);
+    Instantiate(hitEffectPrefab, position, rot);
+}
 }
