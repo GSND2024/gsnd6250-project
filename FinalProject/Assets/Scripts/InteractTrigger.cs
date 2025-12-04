@@ -90,7 +90,7 @@ public class InteractTrigger : MonoBehaviour
             GlobalGameState.cardFindStarted = true;
         }
         
-        if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount >= 1 && GlobalGameState.readyToGoOutside == false)
+        if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount >= 4 && GlobalGameState.readyToGoOutside == false)
         {
             dialogue.name = "CardFindGuy";
             dialogue.sentences = new string[]

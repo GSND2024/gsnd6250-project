@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Tavern.unity
+    guid: e24739b2eb223445b8c6b7cd41239737
   - enabled: 1
     path: Assets/Scenes/HedgeMaze.unity
     guid: b83e5e79f2bfc744b9c7429a240b953b
