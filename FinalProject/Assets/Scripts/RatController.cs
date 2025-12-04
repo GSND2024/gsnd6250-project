@@ -7,17 +7,29 @@ public class RatController : MonoBehaviour
     public float turnSpeed = 180f;
 
     private Rigidbody rb;
+    private bool canMove = false;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }
 
+    public void SetCanMove(bool value)
+    {
+        canMove = value;
+        if (!canMove)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
+    }
+
     private void FixedUpdate()
     {
-        // Make sure your Project Settings → Player → Active Input Handling is set to "Both" or "Input Manager"
-        float horizontal = Input.GetAxis("Horizontal"); // A / D or Left / Right
-        float vertical = Input.GetAxis("Vertical");   // W / S or Up / Down
+        if (!canMove) return;
+
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
 
         // Turn left/right
         transform.Rotate(0f, horizontal * turnSpeed * Time.fixedDeltaTime, 0f);

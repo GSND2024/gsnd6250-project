@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\interacttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interacttrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\mazeraceactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazeraceactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\dialoguemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\mazeracemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazeracemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{36012BDC-9B93-0B29-A773-991AFCB701A1}|Unity.RenderPipelines.Universal.Shaders.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\library\\packagecache\\com.unity.render-pipelines.universal@1e1527b3a17b\\shaders\\lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
-      "RelativeMoniker": "D:0:0:{36012BDC-9B93-0B29-A773-991AFCB701A1}|Unity.RenderPipelines.Universal.Shaders.csproj|solutionrelative:library\\packagecache\\com.unity.render-pipelines.universal@1e1527b3a17b\\shaders\\lit.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\ratcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ratcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\rattrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rattrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InteractTrigger.cs",
-              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\InteractTrigger.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\InteractTrigger.cs",
-              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\InteractTrigger.cs",
-              "RelativeToolTip": "Assets\\Scripts\\InteractTrigger.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAqwFMAAAAAAAAAAAAAAA==",
+              "Title": "MazeRaceActivator.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\MazeRaceActivator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MazeRaceActivator.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\MazeRaceActivator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MazeRaceActivator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T11:37:18.14Z",
+              "WhenOpened": "2025-12-04T05:54:56.978Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DialogueManager.cs",
-              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\DialogueManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\DialogueManager.cs",
-              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\DialogueManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\DialogueManager.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAA3wDIAAABRAAAAAAAAAA==",
+              "Title": "MazeRaceManager.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\MazeRaceManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MazeRaceManager.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\MazeRaceManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MazeRaceManager.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAqwJEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-20T06:45:58.711Z",
+              "WhenOpened": "2025-12-04T05:51:10.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RatTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\RatTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RatTrigger.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\RatTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RatTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-04T05:43:26.81Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Lit.shader",
-              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
-              "RelativeDocumentMoniker": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
-              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
-              "RelativeToolTip": "Library\\PackageCache\\com.unity.render-pipelines.universal@1e1527b3a17b\\Shaders\\Lit.shader",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
-              "WhenOpened": "2025-11-20T00:40:36.76Z"
+              "Title": "RatController.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\RatController.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\RatController.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\RatController.cs",
+              "RelativeToolTip": "Assets\\Scripts\\RatController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T04:09:39.749Z"
             }
           ]
         }
