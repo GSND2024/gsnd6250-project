@@ -62,6 +62,8 @@ public class DialogueManager : MonoBehaviour
 
         nameText.text = dialogue.name;
 
+        Debug.Log("inDialogue true");
+        GlobalGameState.inDialogue = true;
         ShowUI();
         DisplayNextSentence();
     }
@@ -161,6 +163,9 @@ public class DialogueManager : MonoBehaviour
 
         HideUI();
         
+        
+        Debug.Log("inDialogue false");
+        GlobalGameState.inDialogue = false;
         OnDialogueEnded?.Invoke();
     }
 

@@ -11,5 +11,6 @@ public static class GlobalGameState
     public static bool knowBeerForCard = false;
     public static int cardCount = 0;
     public static int bulletCount = 0;
+    public static bool inDialogue = false;
 
 }
