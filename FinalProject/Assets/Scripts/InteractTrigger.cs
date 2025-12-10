@@ -79,24 +79,39 @@ public class InteractTrigger : MonoBehaviour
         Debug.Log("Interaction triggered!");
 
         HidePrompt();                          // hide "Press SPACE"
-        
-        if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount < 4)
+
+        if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount < 4 && GlobalGameState.cardFindStarted == false)
         {
-            dialogue.name = "CardFindGuy";
+            dialogue.name = "Royce Gallows";
             dialogue.sentences = new string[]
             {
-                "I still missing some cards!"
+                "Damn it, the aces are missing from my deck.",
+                "Could you help me find em?",
+                "Tell you what, heard you might be needin' a pistol for the tournament.",
+                "If you find the missing cards, I'll lend you my old pistol."
+            };
+            GlobalGameState.cardFindStarted = true;
+        }
+        
+        if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount < 4 && GlobalGameState.cardFindStarted == true)
+        {
+            dialogue.name = "Royce Gallows";
+            dialogue.sentences = new string[]
+            {
+                "Still missing some cards.",
+                "I can't start my game 'til I have 'em all.",
+                "I'll still lend you the pistol if you find 'em."
             };
             GlobalGameState.cardFindStarted = true;
         }
         
         if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount >= 4 && GlobalGameState.readyToGoOutside == false)
         {
-            dialogue.name = "CardFindGuy";
+            dialogue.name = "Royce Gallows";
             dialogue.sentences = new string[]
             {
-                "Thanks you find them all",
-                "Here is my old pistol"
+                "Thanks! Can finally get my game going.",
+                "You can borrow my old one. Here."
             };
             Debug.Log("CardFindGuy");
             
@@ -105,10 +120,10 @@ public class InteractTrigger : MonoBehaviour
         
         if (gameObject.name == "CardFindGuy" && GlobalGameState.readyToGoOutside == true)
         {
-            dialogue.name = "CardFindGuy";
+            dialogue.name = "Royce Gallows";
             dialogue.sentences = new string[]
             {
-                "My old pistol looks nice on you."
+                "My old pistol looks good on you."
             };
         }
 
@@ -116,7 +131,8 @@ public class InteractTrigger : MonoBehaviour
         {
             dialogue.sentences = new string[]
             {
-                "I want a beer"
+                "Man, I'm thirsty.", 
+                "I sure could use *hic* another drink..."
             };
         }
         
@@ -124,7 +140,8 @@ public class InteractTrigger : MonoBehaviour
         {
             dialogue.sentences = new string[]
             {
-                "if you give me a beer I give a card"
+                "Heard you were *hic* looking for Royce's cards. I happen to have one...",
+                "I might be willing to *hic* part with it if you get me another beer *hic*"
             };
             
             GlobalGameState.knowBeerForCard = true;
@@ -134,7 +151,9 @@ public class InteractTrigger : MonoBehaviour
         {
             dialogue.sentences = new string[]
             {
-                "Thanks for the beer here is your card"
+                "Oh thanks! *hic*",
+                "Didn't think you'd actually *hic* get me one.",
+                "Here's your card"
             };
             
             GlobalGameState.cardCount += 1;
@@ -146,7 +165,10 @@ public class InteractTrigger : MonoBehaviour
         {
             dialogue.sentences = new string[]
             {
-                "I have beer if you have cash"
+                "You need to get Flint another beer, eh?",
+                "Well you gotta cough up the coin friend, and unfortunately your pockets are a little light.",
+                "Maybe if you ask around you might be able to win the bit of extra change.",
+                "If you find yourself with some extra wealth, come let me know, I can get you that beer."
             };
         }
         
@@ -155,7 +177,9 @@ public class InteractTrigger : MonoBehaviour
         {
             dialogue.sentences = new string[]
             {
-                "here is your beer"
+                "Nice bets at that rat race.",
+                "Lookin' to buy that beer now I take it.",
+                "Here you are, thanks for your patronage."
             };
             GlobalGameState.haveBeer = true;
             GlobalGameState.haveCash = false;
@@ -180,10 +204,12 @@ public class InteractTrigger : MonoBehaviour
     {
         if (GlobalGameState.cardFindFinished)
         {
-            dialogue.name = "Tavern Owner";
+            dialogue.name = "Merrit Grigg";
             dialogue.sentences = new string[]
             {
-                "Lets go outside"
+                "Alright everyone, lets start moseyin' our way outside now",
+                "It's time for the tournament to get started!",
+                "Make your way through the front door at your earliest convenience if ya please"
             };
             
             dialogueManager.StartDialogue(dialogue);
