@@ -7,8 +7,11 @@ public class InteractTrigger : MonoBehaviour
     
     public Dialogue dialogue;
     [SerializeField] private DialogueManager dialogueManager;
-    
-    public TextMeshProUGUI promptText; 
+
+    public MazeRaceManager raceManager;
+
+    public TextMeshProUGUI promptText;
+    public TextMeshProUGUI cardCount;
 
     private Transform player;
     private bool playerInRange = false;
@@ -23,6 +26,12 @@ public class InteractTrigger : MonoBehaviour
 
     void Update()
     {
+        if (cardCount != null)
+        {
+            cardCount.text = "Cards: " + GlobalGameState.cardCount + " / 4";
+        }
+        
+
         float distance = Vector3.Distance(player.position, transform.position);
 
         // If a dialogue is currently running, hide prompt and ignore input
@@ -82,45 +91,41 @@ public class InteractTrigger : MonoBehaviour
 
         if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount < 4 && GlobalGameState.cardFindStarted == false)
         {
-            dialogue.name = "Royce Gallows";
+            Debug.Log("here");
             dialogue.sentences = new string[]
             {
                 "Damn it, the aces are missing from my deck.",
                 "Could you help me find em?",
-                "Tell you what, heard you might be needin' a pistol for the tournament.",
+                "Tell you what, heard you might be needin' a pistol for the challenge.",
                 "If you find the missing cards, I'll lend you my old pistol."
             };
             GlobalGameState.cardFindStarted = true;
         }
         
-        if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount < 4 && GlobalGameState.cardFindStarted == true)
+        else if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount < 4 && GlobalGameState.cardFindStarted == true)
         {
-            dialogue.name = "Royce Gallows";
             dialogue.sentences = new string[]
             {
                 "Still missing some cards.",
                 "I can't start my game 'til I have 'em all.",
+                "Come to think of it, I dropped my deck right next to the rat race table earlier...",
                 "I'll still lend you the pistol if you find 'em."
             };
-            GlobalGameState.cardFindStarted = true;
         }
         
-        if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount >= 4 && GlobalGameState.readyToGoOutside == false)
+        else if (gameObject.name == "CardFindGuy" && GlobalGameState.cardCount >= 4 && GlobalGameState.readyToGoOutside == false)
         {
-            dialogue.name = "Royce Gallows";
             dialogue.sentences = new string[]
             {
                 "Thanks! Can finally get my game going.",
                 "You can borrow my old one. Here."
             };
-            Debug.Log("CardFindGuy");
             
             GlobalGameState.cardFindFinished = true;
         }
         
-        if (gameObject.name == "CardFindGuy" && GlobalGameState.readyToGoOutside == true)
+        else if (gameObject.name == "CardFindGuy" && GlobalGameState.readyToGoOutside == true)
         {
-            dialogue.name = "Royce Gallows";
             dialogue.sentences = new string[]
             {
                 "My old pistol looks good on you."
@@ -136,7 +141,7 @@ public class InteractTrigger : MonoBehaviour
             };
         }
         
-        if (gameObject.name == "BeerGuy" && GlobalGameState.cardFindStarted == true && GlobalGameState.haveBeer == false)
+        else if (gameObject.name == "BeerGuy" && GlobalGameState.cardFindStarted == true && GlobalGameState.haveBeer == false && GlobalGameState.gotBeerCard == false)
         {
             dialogue.sentences = new string[]
             {
@@ -147,7 +152,7 @@ public class InteractTrigger : MonoBehaviour
             GlobalGameState.knowBeerForCard = true;
         }
         
-        if (gameObject.name == "BeerGuy" && GlobalGameState.cardFindStarted == true && GlobalGameState.haveBeer == true)
+        else if (gameObject.name == "BeerGuy" && GlobalGameState.cardFindStarted == true && GlobalGameState.haveBeer == true)
         {
             dialogue.sentences = new string[]
             {
@@ -155,9 +160,11 @@ public class InteractTrigger : MonoBehaviour
                 "Didn't think you'd actually *hic* get me one.",
                 "Here's your card"
             };
-            
+            AudioSource audioSource = GetComponent<AudioSource>();
+            audioSource.Play();
             GlobalGameState.cardCount += 1;
             GlobalGameState.haveBeer = false;
+            GlobalGameState.gotBeerCard = true;
         }
 
         if (gameObject.name == "Merrit Grigg" && GlobalGameState.knowBeerForCard == true &&
@@ -171,8 +178,8 @@ public class InteractTrigger : MonoBehaviour
                 "If you find yourself with some extra wealth, come let me know, I can get you that beer."
             };
         }
-        
-        if (gameObject.name == "Merrit Grigg" && GlobalGameState.knowBeerForCard == true &&
+
+        else if (gameObject.name == "Merrit Grigg" && GlobalGameState.knowBeerForCard == true &&
             GlobalGameState.haveCash == true)
         {
             dialogue.sentences = new string[]
@@ -186,8 +193,50 @@ public class InteractTrigger : MonoBehaviour
             GlobalGameState.knowBeerForCard = false;
         }
 
+        else if (gameObject.name == "Merrit Grigg" && GlobalGameState.readyToGoOutside == true)
+        {
+            dialogue.sentences = new string[]
+            {
+                "If you don't mind headin' outside now",
+                "The front door's over there, just walk on out"
+            };
+        }
+
+        if (gameObject.name == "RatRaceGuy" && GlobalGameState.knowRatRace == false)
+        {
+            dialogue.sentences = new string[]
+            {
+                "Say friend you look like the betting type",
+                "Come place a bet at our rat race table",
+                "We put this here rat in the maze, and see if it can do get to the other side in 30 seconds!",
+                "Tell you what, if it does I'll give you all the money I got in my pocket, enough for a beer!",
+                "Sometimes it escapes though and runs around the bar, I always get it though, no need to worry about it getting in your drink!"
+            };
+            GlobalGameState.knowRatRace = true;
+            GlobalGameState.startRatRace = true;
+        }
+        else if (gameObject.name == "RatRaceGuy" && GlobalGameState.knowRatRace == true && GlobalGameState.haveCash == false)
+        {
+            dialogue.sentences = new string[]
+            {
+                "Back for more?",
+                "Let's see if it can make it through the maze this time"
+            };
+            GlobalGameState.startRatRace = true;
+        }
+
         dialogueManager.StartDialogue(dialogue);
 
+        if (GlobalGameState.startRatRace == true)
+        {
+            StartCoroutine(StartRatRace());
+            GlobalGameState.startRatRace = false;
+        }
+
+        if (GlobalGameState.cardFindStarted == true)
+        {
+            StartCoroutine(ShowCardCollection());
+        }
     }
 
     void OnEnable()
@@ -211,10 +260,34 @@ public class InteractTrigger : MonoBehaviour
                 "It's time for the tournament to get started!",
                 "Make your way through the front door at your earliest convenience if ya please"
             };
-            
+
             dialogueManager.StartDialogue(dialogue);
             GlobalGameState.cardFindFinished = false;
-            GlobalGameState.readyToGoOutside =  true;
+            GlobalGameState.readyToGoOutside = true;
+        }
+    }
+
+    private System.Collections.IEnumerator StartRatRace()
+    {
+        while (GlobalGameState.inDialogue)
+        {
+            yield return null;
+        }
+
+
+        raceManager.StartRace();
+    }
+    private System.Collections.IEnumerator ShowCardCollection()
+    {
+        while (GlobalGameState.inDialogue)
+        {
+            yield return null;
+        }
+
+        
+        if (cardCount != null)
+        {
+            cardCount.gameObject.SetActive(true);
         }
     }
 

@@ -162,8 +162,8 @@ public class DialogueManager : MonoBehaviour
         Time.timeScale = 1f;
 
         HideUI();
-        
-        
+
+
         Debug.Log("inDialogue false");
         GlobalGameState.inDialogue = false;
         OnDialogueEnded?.Invoke();

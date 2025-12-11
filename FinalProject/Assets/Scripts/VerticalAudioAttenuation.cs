@@ -6,7 +6,7 @@ public class VerticalAudioAttenuation : MonoBehaviour
     public float floorHeight = 0f; // Y level of floor 1
     public float maxDistance = 3f; // how far up before fully muffled
     public float minVolume = 0.1f; // muffled volume on floor 2
-    public float maxVolume = 1.0f; // full volume on floor 1
+    public float maxVolume = 0.6f; // full volume on floor 1
 
     private AudioSource audioSource;
 

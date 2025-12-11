@@ -1122,6 +1122,7 @@ MonoBehaviour:
   rotationSpeed: {x: 0, y: 60, z: 0}
   bobAmplitude: 0.25
   bobFrequency: 2
+  clip: {fileID: 8300000, guid: ba408fbf64f1386459d9ab60ea7d4cf5, type: 3}
 --- !u!135 &116440243
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6334,6 +6335,7 @@ MonoBehaviour:
   rotationSpeed: {x: 0, y: 60, z: 0}
   bobAmplitude: 0.25
   bobFrequency: 2
+  clip: {fileID: 8300000, guid: ba408fbf64f1386459d9ab60ea7d4cf5, type: 3}
 --- !u!135 &473425099
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6501,6 +6503,7 @@ MonoBehaviour:
   rotationSpeed: {x: 0, y: 60, z: 0}
   bobAmplitude: 0.25
   bobFrequency: 2
+  clip: {fileID: 8300000, guid: ba408fbf64f1386459d9ab60ea7d4cf5, type: 3}
 --- !u!135 &478531150
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10035,6 +10038,7 @@ MonoBehaviour:
   rotationSpeed: {x: 0, y: 60, z: 0}
   bobAmplitude: 0.25
   bobFrequency: 2
+  clip: {fileID: 8300000, guid: ba408fbf64f1386459d9ab60ea7d4cf5, type: 3}
 --- !u!135 &779256030
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16817,6 +16821,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: BulletText
       objectReference: {fileID: 0}
+    - target: {fileID: 1855937755021873740, guid: 619521fae17fc1047bf79ad677b4f591, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855937755021873740, guid: 619521fae17fc1047bf79ad677b4f591, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f72e6cc2f3cf3d74bb868a92c702ac9b, type: 2}
+    - target: {fileID: 1855937755021873740, guid: 619521fae17fc1047bf79ad677b4f591, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855937755021873740, guid: 619521fae17fc1047bf79ad677b4f591, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4995182522697394149, guid: f72e6cc2f3cf3d74bb868a92c702ac9b, type: 2}
+    - target: {fileID: 1855937755021873740, guid: 619521fae17fc1047bf79ad677b4f591, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7929941969530393865, guid: 619521fae17fc1047bf79ad677b4f591, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -21056,6 +21080,7 @@ MonoBehaviour:
   rotationSpeed: {x: 0, y: 60, z: 0}
   bobAmplitude: 0.25
   bobFrequency: 2
+  clip: {fileID: 8300000, guid: ba408fbf64f1386459d9ab60ea7d4cf5, type: 3}
 --- !u!135 &1402893394
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -28030,6 +28055,7 @@ MonoBehaviour:
   rotationSpeed: {x: 0, y: 60, z: 0}
   bobAmplitude: 0.25
   bobFrequency: 2
+  clip: {fileID: 8300000, guid: ba408fbf64f1386459d9ab60ea7d4cf5, type: 3}
 --- !u!135 &1895697959
 SphereCollider:
   m_ObjectHideFlags: 0

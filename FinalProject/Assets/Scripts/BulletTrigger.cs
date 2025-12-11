@@ -10,6 +10,7 @@ public class BulletTrigger : MonoBehaviour
     public float bobFrequency = 2f;    // Speed of bobbing
 
     private Vector3 startPos;
+    public AudioClip clip;
 
     void Start()
     {
@@ -31,6 +32,7 @@ public class BulletTrigger : MonoBehaviour
         {
             Debug.Log("Find a bullet");
             GlobalGameState.bulletCount += 1;
+            AudioSource.PlayClipAtPoint(clip, transform.position);
             Destroy(gameObject);
         }
     }
