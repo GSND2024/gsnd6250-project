@@ -28,7 +28,7 @@ public class MazeRaceManager : MonoBehaviour
     private void Start()
     {
         // Ensure starting state
-        if (ratObject != null) ratObject.SetActive(false);
+        //if (ratObject != null) ratObject.SetActive(false);
         if (ratCamera != null) ratCamera.gameObject.SetActive(false);
         if (playerCamera != null) playerCamera.gameObject.SetActive(true);
 

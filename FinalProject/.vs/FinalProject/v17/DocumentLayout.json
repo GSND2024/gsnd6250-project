@@ -3,32 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\mazeracemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\mazeracemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazeracemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\globalgamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\globalgamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\mazeraceactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazeraceactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\playercontroller3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\rattrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rattrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\simpleidlemotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\simpleidlemotion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\cardtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cardtrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\playercontroller3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroller3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\mazewintrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazewintrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|c:\\users\\robby\\documents\\github\\gsnd6250-project\\finalproject\\assets\\scripts\\mazeraceactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazeraceactivator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\globalgamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\globalgamestate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\ratcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ratcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\rattrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\rattrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\assets\\scripts\\mazewintrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1456745-ED92-4EB6-8905-E64DC1E47277}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mazewintrigger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,11 +46,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "SimpleIdleMotion.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\SimpleIdleMotion.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SimpleIdleMotion.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\SimpleIdleMotion.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SimpleIdleMotion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T08:07:21.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CardTrigger.cs",
+              "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\CardTrigger.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CardTrigger.cs",
+              "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\CardTrigger.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CardTrigger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-11T07:38:02.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "GlobalGameState.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\GlobalGameState.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GlobalGameState.cs",
@@ -50,25 +84,23 @@
               "RelativeToolTip": "Assets\\Scripts\\GlobalGameState.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T06:27:54.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T06:27:54.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "PlayerController3D.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\PlayerController3D.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerController3D.cs",
               "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\PlayerController3D.cs",
               "RelativeToolTip": "Assets\\Scripts\\PlayerController3D.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwCAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T06:22:32.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T06:22:32.452Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "MazeWinTrigger.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\MazeWinTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MazeWinTrigger.cs",
@@ -76,18 +108,17 @@
               "RelativeToolTip": "Assets\\Scripts\\MazeWinTrigger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T06:09:29.01Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T06:09:29.01Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MazeRaceActivator.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\MazeRaceActivator.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MazeRaceActivator.cs",
               "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\MazeRaceActivator.cs",
               "RelativeToolTip": "Assets\\Scripts\\MazeRaceActivator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T05:54:56.978Z",
               "EditorCaption": ""
@@ -100,26 +131,27 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\MazeRaceManager.cs",
               "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\MazeRaceManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\MazeRaceManager.cs",
-              "ViewState": "AgIAAFQAAAAAAAAAAAAiwHQAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-04T05:51:10.647Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "RatTrigger.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\RatTrigger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RatTrigger.cs",
               "ToolTip": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\RatTrigger.cs",
               "RelativeToolTip": "Assets\\Scripts\\RatTrigger.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T05:43:26.81Z"
+              "WhenOpened": "2025-12-04T05:43:26.81Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "RatController.cs",
               "DocumentMoniker": "C:\\Users\\robby\\Documents\\GitHub\\gsnd6250-project\\FinalProject\\Assets\\Scripts\\RatController.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\RatController.cs",

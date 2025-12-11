@@ -12,6 +12,7 @@ public class MazeRaceActivator : MonoBehaviour
         if (other.CompareTag(playerTag))
         {
             playerInRange = true;
+            //prompt here
         }
     }
 
