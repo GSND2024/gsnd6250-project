@@ -8,7 +8,7 @@ public class OutsideTrigger : MonoBehaviour
         {
             if (GlobalGameState.readyToGoOutside)
             {
-                SceneManager.LoadScene("HedgeMaze");
+                SceneLoader.LoadScene("HedgeMaze");
             }
         }
     }

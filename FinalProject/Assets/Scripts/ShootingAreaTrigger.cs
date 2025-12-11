@@ -43,6 +43,6 @@ public class ShootingAreaTrigger : MonoBehaviour
         }
 
         
-        SceneManager.LoadScene("ShootingArea");
+        SceneLoader.LoadScene("ShootingArea");
     }
 }

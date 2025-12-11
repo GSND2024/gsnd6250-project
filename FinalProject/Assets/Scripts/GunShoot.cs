@@ -20,6 +20,7 @@ public class GunShoot : MonoBehaviour
     public Dialogue winDialogue;
     public Dialogue tieDialogue;
     public Dialogue loseDialogue;
+    public Dialogue fiveDialogue;
 
     public GameObject resultMenu;
     public Button replayButton;
@@ -157,10 +158,12 @@ public class GunShoot : MonoBehaviour
 
         if (destroyedTargets == 6 && winDialogue != null)
             dm.StartDialogue(winDialogue);
-        else if (destroyedTargets == 5 && tieDialogue != null)
+        else if (destroyedTargets == 4 && tieDialogue != null)
             dm.StartDialogue(tieDialogue);
-        else if (destroyedTargets <= 4 && loseDialogue != null)
+        else if (destroyedTargets <= 3 && loseDialogue != null)
             dm.StartDialogue(loseDialogue);
+        else if (destroyedTargets == 5 && fiveDialogue != null)
+            dm.StartDialogue(fiveDialogue);
     }
 
     void ShowResultMenu()
@@ -178,13 +181,13 @@ public class GunShoot : MonoBehaviour
     void ReplayScene()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(replaySceneName);
+        SceneLoader.LoadScene(replaySceneName);
     }
 
     void GoToEndScene()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(endSceneName);
+        SceneLoader.LoadScene(endSceneName);
     }
     
     void SpawnHitEffect(Vector3 position, Vector3 normal)
