@@ -191,6 +191,7 @@ public class InteractTrigger : MonoBehaviour
             GlobalGameState.haveBeer = true;
             GlobalGameState.haveCash = false;
             GlobalGameState.knowBeerForCard = false;
+            GlobalGameState.boughtBeer = true;
         }
 
         else if (gameObject.name == "Merrit Grigg" && GlobalGameState.readyToGoOutside == true)
@@ -221,6 +222,16 @@ public class InteractTrigger : MonoBehaviour
             {
                 "Back for more?",
                 "Let's see if it can make it through the maze this time"
+            };
+            GlobalGameState.startRatRace = true;
+        }
+        else if (gameObject.name == "RatRaceGuy" && (GlobalGameState.boughtBeer == true || GlobalGameState.haveCash == true))
+        {
+            dialogue.sentences = new string[]
+            {
+                "Back for more?",
+                "Unfortunately I gave you my last bit of change, so I won't have a reward for you if the rat wins",
+                "Still though, you can play for fun."
             };
             GlobalGameState.startRatRace = true;
         }

@@ -24,6 +24,8 @@ public class MazeRaceManager : MonoBehaviour
 
     private float timeRemaining;
     private bool raceActive = false;
+    public Dialogue dialogue;
+    [SerializeField] private DialogueManager dialogueManager;
 
     private void Start()
     {
@@ -104,6 +106,14 @@ public class MazeRaceManager : MonoBehaviour
         if (losePanel != null) losePanel.SetActive(true);
 
         FinishRaceCommon();
+
+        dialogue.name = "Gideon Pike";
+        dialogue.sentences = new string[]
+        {
+            "Aaaand that's time!",
+            "Get back here you slippery bugger"
+        };
+        dialogueManager.StartDialogue(dialogue);
     }
 
     // Called by MazeWinTrigger when rat enters win zone
@@ -114,9 +124,32 @@ public class MazeRaceManager : MonoBehaviour
 
         if (winPanel != null) winPanel.SetActive(true);
 
-        GlobalGameState.haveCash = true;
-
         FinishRaceCommon();
+
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+
+        dialogue.name = "Gideon Pike";
+        if (GlobalGameState.boughtBeer || GlobalGameState.haveCash)
+        {
+            dialogue.sentences = new string[]
+            {
+                "Man that rat made it through the maze again!",
+                "Unfortunately, you took my last bit of change, so no reward this time."
+            };
+            
+        }
+        else
+        {
+            dialogue.sentences = new string[]
+            {
+                "That rat made it through the maze!",
+                "Well partner, here's your winnings, enough to buy a beer!"
+            };
+        }
+        
+        dialogueManager.StartDialogue(dialogue);
+        GlobalGameState.haveCash = true;
     }
 
     // Also used by Escape cancel

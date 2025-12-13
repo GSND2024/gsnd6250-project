@@ -17,4 +17,5 @@ public static class GlobalGameState
     public static bool startRatRace = false;
     public static bool gotBeerCard = false;
     public static bool behindBarFound = false;
+    public static bool boughtBeer = false;
 }
